@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Circular UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/changeable/tau.circle.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	
+<div class="ui-page" id="main">
+	<div class="top-button"><div class="top-capt"><h1><a href="#menu">Menu</a></h1></div></div>
+	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#mode">Mode</a></h1></div></div>
+	<div class="mid-button"><div class="mid-capt">Current BPM:<h2>143</h2></div></div>
+
+	<div class="side-button1">&#9668;&#9668;</div>
+	<div class="side-button2">&#9658;&#9658;</div>
+	<div class="side-button3">&#9650;&#9834;</div>
+	<div class="side-button4">&#9660;&#9834;</div>
+	
+	
+	
+
+	<div class="circle"></div>
+	<div class="mid-circle"></div>
+	<div class="top-circle"></div>
+	<div class="bottom-circle"></div>
+</div>
+
+<div class="ui-page" id="mode">
+	<div class="top-button"><div class="top-capt"><h1>Switch</h1></div></div>
+	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">OK</a></h1></div></div>
+	<div class="mid-button"><div class="mid-capt">Current BPM:<h2><span id="current-bpm">143</span></h2></div></div>
+
+	<div class="side-button1">&#9650;5</div>
+	<div class="side-button2">&#9660;5</div>
+	<div class="side-button3">&#9650;1</div>
+	<div class="side-button4">&#9660;1</div>
+	
+	
+
+	<div class="circle"></div>
+	<div class="mid-circle"></div>
+	<div class="top-circle"></div>
+	<div class="bottom-circle"></div>
+</div>
+
+<div class="ui-page" id="abc">
+	<header class="ui-header">
+	<div class="top-button"><div class="top-capt"><h1>Menu</h1></div></div>
+	</header>
+	<div class="ui-content">
+	<ul class="ui-listview">
+			 <li class="ui-group-index">Show internal pages:</li>
+				 <li class="ui-li-anchor"><a href="#popup" data-rel="popup" data-position-to="window">Show page "popup"</a></li>
+				 <li class="ui-li-anchor"><a href="#two">Show page "two"</a></li>
+			</ul>
+	</div>
+	
+	<footer class="ui-footer">
+	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">Back</a></h1></div></div>
+	</footer>
+	
+
+	
+	
+	
+
+	<div class="circle"></div>
+	<div class="mid-circle"></div>
+	<div class="top-circle"></div>
+	<div class="bottom-circle"></div>
+</div>
+
+
+<div class="ui-page" id="menu">
+
+	<div class="top-button"><div class="top-capt"><h1>Menu</h1></div></div>
+
+	<div class="content">
+	<pre>
+	dfdfd
+	d
+	fd
+	fdfdfdf
+	dfd
+	f
+	dfdfdf
+	dfd
+	fdf
+	d
+	fdfdfdf
+	df
+	df</pre>
+	</div>
+	
+	
+	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">Back</a></h1></div></div>
+	
+	
+
+	
+	
+	
+
+	
+	
+</div>
+
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+	<script src="app.js"></script>
+	<script src="lowBatteryCheck.js"></script>
+</body>
+</html>

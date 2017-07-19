@@ -1,0 +1,252 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#000000;
+    text-shadow:5px 2px 10px black, 0 0 5px #ffffff;
+}
+
+.contents {
+	display: flex;
+	display: -webkit-flex;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height:320px;
+}
+
+.content-padding {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.content_text {
+	font-weight:bold;
+	font-size:5em;
+	color:#fff;
+}
+
+/*=======================================================*/
+
+.page {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:360px;
+	height:360px;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	z-index: 100;
+}
+
+.round {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:360px;
+	height:360px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	z-index:100;
+}
+
+.top-button{
+	position:absolute;
+	top: -320px;
+	left: -20px;
+	width:400px;
+	height:400px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:5;
+	display:inline-block;
+	vertical-align: bottom;
+	text-align:center;
+	display:table;
+}
+.top-circle{
+	position:absolute;
+	top: -330px;
+	left: -30px;
+	width:420px;
+	height:420px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:#000000;
+	z-index:4;
+}
+
+.bottom-button{
+	position:absolute;
+	top: 280px;
+	left: -20px;
+	width:400px;
+	height:400px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:5;
+	display:inline-block;
+	vertical-align: top;
+	text-align:center;
+	display:table;
+}
+.bottom-circle{
+	position:absolute;
+	top: 270px;
+	left: -30px;
+	width:420px;
+	height:420px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:#000000;
+	z-index:4;
+}
+
+.side-button1{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:180px;
+	height:175px;
+	border-radius:0%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:1;
+	padding:100px 0px 0px 25px;
+}
+.side-button2{
+	position:absolute;
+	top: 185px;
+	left: 0px;
+	width:180px;
+	height:175px;
+	border-radius:0%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:1;
+	padding:35px 0px 0px 25px;
+}
+.side-button3{
+	position:absolute;
+	top: 0px;
+	left: 180px;
+	width:180px;
+	height:175px;
+	border-radius:0%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:1;
+	padding:100px 0px 0px 90px;
+}
+.side-button4{
+	position:absolute;
+	top: 185px;
+	left: 180px;
+	width:180px;
+	height:175px;
+	border-radius:0%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:1;
+	padding:35px 0px 0px 90px;
+}
+
+
+
+
+
+.mid-button{
+	position:absolute;
+	top: 90px;
+	left: 90px;
+	width:180px;
+	height:180px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	z-index:3;
+	font-size:11px;
+	display:table;
+}
+.mid-circle{
+	position:absolute;
+	top: 80px;
+	left: 80px;
+	width:200px;
+	height:200px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:#000000;
+	z-index:2;
+}
+.top-capt{
+	display:table-cell;
+	vertical-align: bottom;
+	text-align:center;
+}
+.mid-capt{
+	display:table-cell;
+	vertical-align: middle;
+	text-align:center;
+}
+.bottom-capt{
+	display:table-cell;
+	vertical-align: top;
+	text-align:center;
+}
+.circle{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:360px;
+	height:360px;
+	border-radius:100%;
+	border-width: 10px;
+	border-color: black;
+	border-style:solid;
+	background-color:transparent;
+	z-index:2;
+}
+h1{
+	font-weight:normal;
+	margin:10px;
+	font-size:40px;
+}
+h2{
+	font-weight:normal;
+	margin:10px;
+	font-size:60px;
+}
+.content{
+	width:300px;
+	margin:0px auto 0px auto;
+	padding: 50px 0px 50px 0px;
+}
