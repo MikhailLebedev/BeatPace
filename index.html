@@ -14,7 +14,7 @@
 <div class="ui-page" id="main">
 	<div class="top-button"><div class="top-capt"><h1><a href="#menu">Menu</a></h1></div></div>
 	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#mode">Mode</a></h1></div></div>
-	<div class="mid-button"><div class="mid-capt">Current BPM:<h2>143</h2></div></div>
+	<div class="mid-button"><div class="mid-capt">Current BPM:<br><h2><span class="current-bpm">143</span></h2><br>Volume value:<span class="volume-val">3</span></div></div>
 
 	<div class="side-button1">&#9668;&#9668;</div>
 	<div class="side-button2">&#9658;&#9658;</div>
@@ -28,12 +28,14 @@
 	<div class="mid-circle"></div>
 	<div class="top-circle"></div>
 	<div class="bottom-circle"></div>
+	
+	<canvas id="volume" width="360" height="360"></canvas>
 </div>
 
 <div class="ui-page" id="mode">
 	<div class="top-button"><div class="top-capt"><h1>Switch</h1></div></div>
 	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">OK</a></h1></div></div>
-	<div class="mid-button"><div class="mid-capt">Current BPM:<h2><span id="current-bpm">143</span></h2></div></div>
+	<div class="mid-button"><div class="mid-capt">Current BPM:<h2><span class="current-bpm">143</span></h2><span class="volume-val">3</span></div></div>
 
 	<div class="side-button1">&#9650;5</div>
 	<div class="side-button2">&#9660;5</div>
