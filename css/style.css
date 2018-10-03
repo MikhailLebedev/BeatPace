@@ -1,21 +1,10 @@
-@font-face {
-    font-family: 'RobotoTh';
-	src: url("3967.ttf") format('truetype');
-	font-weight: normal;
-}
-
-
-
-/*
 * {
     font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
 }
-*/
 
 body {
     margin: 0px auto;
     background-color:#000000;
-    
     color: #ffffff;
 }
 
@@ -41,6 +30,18 @@ body {
 }
 
 /*=======================================================*/
+h1{
+	font-family: Arial;
+	margin:10px;
+	font-size:40px;
+	font-weight: 100;
+}
+
+h2{
+	font-weight:normal;
+	margin:10px;
+	font-size:60px;
+}
 
 .page {
 	position:absolute;
@@ -80,11 +81,11 @@ body {
 	background-color:rgba(22,22,77,0.7);
 	background:linear-gradient(to bottom, #000000 80%, #050533 100%);
 	z-index:5;
-	display:inline-block;
 	vertical-align: bottom;
 	text-align:center;
 	display:table;
 }
+
 .top-circle{
 	position:absolute;
 	top: -330px;
@@ -110,13 +111,13 @@ body {
 	border-color: white;
 	border-style:solid;
 	background-color:rgba(22,22,77,0.7);
-	background:linear-gradient(to top, #000000 80%, #222277 100%);
+	background:linear-gradient(to top, #000000 70%, #222277 100%);
 	z-index:5;
-	display:inline-block;
 	vertical-align: top;
 	text-align:center;
 	display:table;
 }
+
 .bottom-circle{
 	position:absolute;
 	top: 270px;
@@ -131,7 +132,7 @@ body {
 	z-index:4;
 }
 
-.side-button1{
+.side-button-top-left{
 	position:absolute;
 	top: 0px;
 	left: 0px;
@@ -146,7 +147,8 @@ body {
 	z-index:1;
 	padding:100px 0px 0px 25px;
 }
-.side-button2{
+
+.side-button-bottom-left{
 	position:absolute;
 	top: 185px;
 	left: 0px;
@@ -161,7 +163,8 @@ body {
 	z-index:1;
 	padding:35px 0px 0px 25px;
 }
-.side-button3{
+
+.side-button-top-right{
 	position:absolute;
 	top: 0px;
 	left: 180px;
@@ -176,7 +179,8 @@ body {
 	z-index:1;
 	padding:100px 0px 0px 90px;
 }
-.side-button4{
+
+.side-button-bottom-right{
 	position:absolute;
 	top: 185px;
 	left: 180px;
@@ -192,9 +196,39 @@ body {
 	padding:35px 0px 0px 90px;
 }
 
+.side-half-button-left{
+	font-size: 22px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:180px;
+	height:360px;
+	border-radius:0%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	background:linear-gradient(-35deg, #222277 20%, #000000 100%);
+	z-index:1;
+	padding:170px 0px 0px 25px;
+}
 
-
-
+.side-half-button-right{
+	font-size: 22px;
+	position:absolute;
+	top: 0px;
+	left: 180px;
+	width:180px;
+	height:360px;
+	border-radius:0%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,77,0.7);
+	background:linear-gradient(35deg, #222277 20%, #000000 100%);
+	z-index:1;
+	padding:170px 0px 0px 110px;
+}
 
 .mid-button{
 	position:absolute;
@@ -212,6 +246,7 @@ body {
 	font-size:11px;
 	display:table;
 }
+
 .mid-circle{
 	position:absolute;
 	top: 80px;
@@ -225,21 +260,25 @@ body {
 	background-color:#000000;
 	z-index:2;
 }
+
 .top-capt{
 	display:table-cell;
 	vertical-align: bottom;
 	text-align:center;
 }
+
 .mid-capt{
 	display:table-cell;
 	vertical-align: middle;
 	text-align:center;
 }
+
 .bottom-capt{
 	display:table-cell;
 	vertical-align: top;
 	text-align:center;
 }
+
 .circle{
 	position:absolute;
 	top: 0px;
@@ -250,24 +289,90 @@ body {
 	border-width: 10px;
 	border-color: #444444;
 	border-style:solid;
-	background-color:transparent;
-	z-index:7;
+	background-color:rgba(22,22,22,0.7);
+	z-index:-1;
 }
-h1{
-	font-family: Arial;
-	margin:10px;
-	font-size:40px;
-	font-weight: 100;
-}
-h2{
-	font-weight:normal;
-	margin:10px;
-	font-size:60px;
-}
+
 .content{
 	width:300px;
 	margin:0px auto 0px auto;
 	padding: 50px 0px 50px 0px;
+}
+
+.bot-caption-1 {
+	font-size:14px;
+}
+
+.div-center{
+	display:table-cell;
+	vertical-align: middle;
+	text-align:center;
+}
+
+.auto-mod {
+	position:absolute;
+	top: 90px;
+	left: 90px;
+	width:180px;
+	height:180px;
+	border-radius:100%;
+	border-width: 0px;
+	border-color: white;
+	border-style:solid;
+	background-color:rgba(22,22,22,0.7);
+	z-index:7;
+	font-size:11px;
+	display:block;
+}
+
+.loading {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:360px;
+	height:360px;
+	display:table;
+	background-color:rgba(00,00,00,1.0);
+	z-index:8;
+}
+
+.song-list{
+	width:360px;
+	margin:0px;
+	padding:0px;
+}
+
+.song-item{
+	width:360px;
+	height:50px;
+	margin:0px;
+	padding:0px;
+}
+
+.name {
+	width:360px;
+	margin:0px;
+	padding:0px;
+	height:30px;
+	color:white;
+	font-size:14px;
+	line-height: 30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.artist {
+	width: 360px;
+	margin:0px;
+	padding:0px;
+	height: 20px;
+	color:cyan;
+	font-size:12px;
+	line-height: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #volume {
@@ -276,6 +381,6 @@ h2{
 	position:absolute;
 	top:0px;
 	left:0px;
-	z-index:8;
+	z-index:-1;
 	border:0px solid white;
 }

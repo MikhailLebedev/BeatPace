@@ -2,118 +2,124 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width,user-scalable=no">
-	<title>Circular UI</title>
+	<title>BeatPace</title>
 	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
 	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/changeable/tau.circle.css">
-	<!-- load theme file for your application -->
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
-	
+<!-- MAIN PAGE -->
 <div class="ui-page" id="main">
-	<div class="top-button"><div class="top-capt"><h1><a href="#menu">Menu</a></h1></div></div>
-	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#mode">Mode</a></h1></div></div>
-	<div class="mid-button"><div class="mid-capt">Current BPM:<br><h2><span class="current-bpm">143</span></h2><br>Volume value:<span class="volume-val">3</span></div></div>
+	<div class="loading">
+		<div class="div-center">
+			BeatPace
+		</div>
+	</div>
+	<div class="top-button">
+		<div class="top-capt">
+			<h1><a href="#songs">Songs</a></h1>
+		</div>
+	</div>
+	<div class="bottom-button">
+		<div class="bottom-capt">
+			<h1><a href="#mode">Mode</a></h1>
+		</div>
+	</div>
+	<div class="mid-button">
+		<div class="mid-capt">
+			Current BPM:<br>
+			<h2><span class="current-bpm"></span></h2><br>
+			Volume value:<span class="volume-val"></span>
+		</div>
+	</div>
+	<div class="side-half-button-left" onClick="PlayPauseTrack();">
+		<div class="div-center">
+			Play<br>
+			<span class="bot-caption-1">pause</span>
+		</div>
+	</div>
+	<div class="side-half-button-right" onCLick="NextTrack();">
+		<div class="div-center">
+			Next<br>
+			<span class="bot-caption-1">track</span>
+		</div>
+	</div>
 
-	<div class="side-button1">&#9668;&#9668;</div>
-	<div class="side-button2">&#9658;&#9658;</div>
-	<div class="side-button3">&#9650;&#9834;</div>
-	<div class="side-button4">&#9660;&#9834;</div>
-	
-	
-	
-
-	<div class="circle"></div>
 	<div class="mid-circle"></div>
 	<div class="top-circle"></div>
 	<div class="bottom-circle"></div>
-	
+	<div class="circle">
+		<img src="img/sound.png" height="200" width="200" style="margin: 70px 80px 80px 70px;">
+	</div>
 	<canvas id="volume" width="360" height="360"></canvas>
 </div>
+<!-- / MAIN PAGE -->
 
+<!-- MODE SELECTION PAGE -->
 <div class="ui-page" id="mode">
-	<div class="top-button"><div class="top-capt"><h1>Switch</h1></div></div>
-	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">OK</a></h1></div></div>
-	<div class="mid-button"><div class="mid-capt">Current BPM:<h2><span class="current-bpm">143</span></h2><span class="volume-val">3</span></div></div>
-
-	<div class="side-button1">&#9650;5</div>
-	<div class="side-button2">&#9660;5</div>
-	<div class="side-button3">&#9650;1</div>
-	<div class="side-button4">&#9660;1</div>
+	<div class="top-button">
+		<div class="top-capt">
+			<h1>Mode</h1>
+		</div>
+	</div>
+	<div class="bottom-button" onClick="PressedOK();">
+		<div class="bottom-capt">
+			<h1><a href="#main">OK</a></h1>
+		</div>
+	</div>
+	<div class="mid-button">
+		<div class="mid-capt">
+			Current BPM:
+			<h2><span class="current-bpm"></span></h2><br>
+			Volume value:
+			<span class="volume-val"></span>
+		</div>
+	</div>
+	<div class="side-half-button-left" onClick="SetAutoMod();">
+		<div class="div-center">
+			Auto<br><span class="bot-caption-1">mode</span>
+		</div>
+	</div>
+	<div class="side-half-button-right" onClick="SetManualMod();">
+		<div class="div-center">
+			Man<br><span class="bot-caption-1">mode</span>
+		</div>
+	</div>
 	
-	
-
-	<div class="circle"></div>
 	<div class="mid-circle"></div>
 	<div class="top-circle"></div>
 	<div class="bottom-circle"></div>
+	<div class="circle"></div>
+	<div class="auto-mod"></div>
 </div>
+<!-- / MODE SELECTION PAGE -->
 
-<div class="ui-page" id="abc">
-	<header class="ui-header">
-	<div class="top-button"><div class="top-capt"><h1>Menu</h1></div></div>
-	</header>
+<!-- SONG LIST PAGE -->
+<div class="ui-page" id="songs">
+	<audio width="0" height="0" id="player" preload="auto" style="visibility: hidden;"></audio>
+	<div class="top-button">
+		<div class="top-capt">
+			<h1>Songs</h1>
+		</div>
+	</div>
+	<div class="bottom-button">
+		<div class="bottom-capt">
+			<h1><a href="#main">Back</a></h1>
+		</div>
+	</div>
+	
 	<div class="ui-content">
-	<ul class="ui-listview">
-			 <li class="ui-group-index">Show internal pages:</li>
-				 <li class="ui-li-anchor"><a href="#popup" data-rel="popup" data-position-to="window">Show page "popup"</a></li>
-				 <li class="ui-li-anchor"><a href="#two">Show page "two"</a></li>
-			</ul>
+		<div class="song-list">
+		</div>
 	</div>
-	
-	<footer class="ui-footer">
-	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">Back</a></h1></div></div>
-	</footer>
-	
-
-	
-	
-	
-
-	<div class="circle"></div>
-	<div class="mid-circle"></div>
-	<div class="top-circle"></div>
-	<div class="bottom-circle"></div>
 </div>
-
-
-<div class="ui-page" id="menu">
-
-	<div class="top-button"><div class="top-capt"><h1>Menu</h1></div></div>
-
-	<div class="content">
-	<pre>
-	dfdfd
-	d
-	fd
-	fdfdfdf
-	dfd
-	f
-	dfdfdf
-	dfd
-	fdf
-	d
-	fdfdfdf
-	df
-	df</pre>
-	</div>
-	
-	
-	<div class="bottom-button"><div class="bottom-capt"><h1><a href="#main">Back</a></h1></div></div>
-	
-	
-
-	
-	
-	
-
-	
-	
-</div>
-
-	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
-	<script src="app.js"></script>
-	<script src="lowBatteryCheck.js"></script>
+<!-- / SONG LIST PAGE --> 
+<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+<script type="text/javascript" src="lib/tau/wearable/js/jquery.js"></script>
+<script type="text/javascript" src="js/circle-helper.js"></script>
+<script type="text/javascript" src="js/audio.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
+<script type="text/javascript" src="js/lowBatteryCheck.js"></script>
 </body>
 </html>
