@@ -52,6 +52,22 @@ function NextTrack() {
 	}
 }
 
+function PrevTrack() {
+	$("#track" + index[String(current_bpm)]).css("background", "transparent");
+	var paused = true;
+	paused = audio.paused;
+	index[String(current_bpm)] -= 1;
+	$("#track" + index[String(current_bpm)]).css("background", "#555599");
+	if (index[String(current_bpm)] === song_url.length) {
+		GetTrackList();
+	}
+	audio.src = song_url[index[String(current_bpm)]]; 
+	audio.load();
+	if (paused === false) {
+		audio.play();
+	}
+}
+
 function InitPlayer() {
 	audio = $("#player")[0];
 	audio.onended = NextTrack;
